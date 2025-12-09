@@ -40,6 +40,7 @@ let flag = 0
 allSongs.addEventListener("click", function(dets) {
     selectedSong = dets.target.id
     flag = 1
+    backward.style.opacity = 1
     pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
     showMusics()
     audio.play()  
