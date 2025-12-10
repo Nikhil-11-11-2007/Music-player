@@ -37,13 +37,14 @@ function showMusics() {
 
 showMusics()
 let flag = 0
-allSongs.addEventListener("click", function(dets) {
-    selectedSong = dets.target.id
+allSongs.addEventListener("click", function(det) {
+    selectedSong = det.target.id
     flag = 1
     backward.style.opacity = 1
+    forward.style.opacity = 1
     pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
     showMusics()
-    audio.play()  
+    audio.play()
 })
 
 pLAY.addEventListener("click", function() {
@@ -54,6 +55,7 @@ pLAY.addEventListener("click", function() {
         flag = 1
     }else{
         pLAY.innerHTML = `<i class="ri-play-fill"></i>`
+        showMusics()
         audio.pause()
         flag = 0
     }
@@ -63,23 +65,35 @@ forward.addEventListener("click", function() {
     if(selectedSong < allMusics.length - 1){
         flag = 1
         selectedSong++
+        backward.style.opacity = 1  
         pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
         showMusics()
         audio.play()
-        backward.style.opacity = 1
     }else{
         forward.style.opacity = .3
-    }
+    }    
 })
-
 backward.addEventListener("click", function() {
     if(selectedSong > 0){
         flag = 1
-        selectedSong--
         pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
+        selectedSong--
         showMusics()
         audio.play()
     }else{
         backward.style.opacity = .3
     }
 })
+
+audio.addEventListener("ended", function() {
+    if(selectedSong < allMusics.length - 1){
+        selectedSong++
+    }else{
+        selectedSong = 0
+    }
+    pLAY.innerHTML = `<i class="ri-pause-fill"></i>`;
+    showMusics()
+    audio.play()
+
+})
+
