@@ -97,3 +97,88 @@ audio.addEventListener("ended", function() {
 
 })
 
+// function allEvents() {
+//     let flag = 0
+// allSongs.addEventListener("click", function(dets) {
+//     selectedSong = dets.target.id
+//     flag = 1
+//     backward.style.opacity = 1
+//     pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
+//     showMusics()
+//     audio.play()  
+// })
+
+// pLAY.addEventListener("click", function() {
+//     if(flag === 0){
+//         pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
+//         showMusics()
+//         audio.play()
+//         flag = 1
+//     }else{
+//         pLAY.innerHTML = `<i class="ri-play-fill"></i>`
+//         audio.pause()
+//         flag = 0
+//     }
+// })
+
+// forward.addEventListener("click", function() {
+//     if(selectedSong < allMusics.length - 1){
+//         flag = 1
+//         selectedSong++
+//         pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
+//         showMusics()
+//         audio.play()
+//         backward.style.opacity = 1
+//     }else{
+//         forward.style.opacity = .3
+//     }
+// })
+
+// backward.addEventListener("click", function() {
+//     if(selectedSong > 0){
+//         flag = 1
+//         selectedSong--
+//         pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
+//         showMusics()
+//         audio.play()
+//     }else{
+//         backward.style.opacity = .3
+//     }
+// })
+
+// audio.addEventListener("ended", function(){
+//     if(selectedSong < allMusics.length -1){
+//         selectedSong++
+//     }else{
+//         selectedSong = 0
+//     }
+
+//     pLAY.innerHTML = `<i class="ri-pause-fill"></i>`;
+//     showMusics();
+//     audio.play();
+// })
+
+// function formatTime(time) {
+//     let minutes = Math.floor(time / 60);
+//     let seconds = Math.floor(time % 60);
+//     if (seconds < 10) seconds = "0" + seconds;
+//     return `${minutes}:${seconds}`;
+// }
+// formatTime()
+
+// audio.addEventListener("loadedmetadata", function () {
+//     document.querySelector("#totalTime").innerText = formatTime(audio.duration);
+//     document.querySelector("#progress").max = audio.duration;
+// });
+
+// audio.addEventListener("timeupdate", function () {
+//     document.querySelector("#currentTime").innerText = formatTime(audio.currentTime);
+//     document.querySelector("#progress").value = audio.currentTime;
+// });
+
+// document.querySelector("#progress").addEventListener("input", function () {
+//     audio.currentTime = this.value;
+// });
+// }
+
+// allEvents()
