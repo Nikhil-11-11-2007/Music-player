@@ -6,7 +6,8 @@
   font-family: sans-serif;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
 }
@@ -98,6 +99,9 @@ main .right .all-songs::-webkit-scrollbar {
   align-items: center;
   gap: 1vw;
 }
+.player .time #progress {
+  height: 1vh;
+}
 .player h3 {
   cursor: pointer;
   padding: 0.8vw;
@@ -119,7 +123,6 @@ main .right .all-songs::-webkit-scrollbar {
 
 @media (max-width: 700px) {
   main {
-    background-color: darkblue;
     align-items: center;
     padding: 5vw 3vw;
     flex-direction: column;
@@ -156,12 +159,18 @@ main .right .all-songs::-webkit-scrollbar {
   .player {
     gap: 6vw;
   }
+  .player .time {
+    margin-top: -1vw;
+  }
+  .player .time #progress {
+    height: 1vh;
+  }
   .player h3 {
     cursor: pointer;
     padding: 3vw;
     background-color: rgba(93, 91, 91, 0.2235294118);
   }
   .player h3 i {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 }/*# sourceMappingURL=style.css.map */

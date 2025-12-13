@@ -50,12 +50,10 @@ allSongs.addEventListener("click", function(det) {
 pLAY.addEventListener("click", function() {
     if(flag === 0){
         pLAY.innerHTML = `<i class="ri-pause-fill"></i>`
-        showMusics()
         audio.play()
         flag = 1
     }else{
         pLAY.innerHTML = `<i class="ri-play-fill"></i>`
-        showMusics()
         audio.pause()
         flag = 0
     }
