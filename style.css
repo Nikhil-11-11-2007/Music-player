@@ -101,6 +101,7 @@ main .right .all-songs::-webkit-scrollbar {
 }
 .player .time #progress {
   height: 1vh;
+  cursor: pointer;
 }
 .player h3 {
   cursor: pointer;
